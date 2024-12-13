@@ -19,3 +19,16 @@ jobs:
           go version
       - name: run tests for go file
         run: go test
+
+      - name: checkout private repo remotely
+        uses: actions/checkout@v4
+        with:
+          repository: daryloye/CICDTest
+          path: hiddenFolder
+          token: ${{ secrets.DARYL}}
+
+      - name: List out hidden things
+        run: |
+          ls
+          cd hiddenFolder
+          ls
