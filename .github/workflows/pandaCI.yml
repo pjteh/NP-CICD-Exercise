@@ -8,17 +8,17 @@ jobs:
     runs-on: ubuntu-latest
     name: My Build
     steps:
-      - name: Check out code
-        uses: actions/checkout@v4
-      - name: setup go
-        uses: actions/setup-go@v5.2.0
-        with:
-          go-version: 1.17.0
-      - name: check go version
-        run: |
-          go version
-      - name: run tests for go file
-        run: go test
+#      - name: Check out code
+#        uses: actions/checkout@v4
+#      - name: setup go
+#        uses: actions/setup-go@v5.2.0
+#        with:
+#          go-version: 1.17.0
+#      - name: check go version
+#        run: |
+#          go version
+#      - name: run tests for go file
+#        run: go test
 
       - name: checkout private repo remotely
         uses: actions/checkout@v4
@@ -39,3 +39,14 @@ jobs:
       - name: read updated README on github cloud
         run: |
           cat README.md
+
+      - name: write updated README to daryl
+        uses: discord-actions/message@v2
+        with: 
+          webhookUrl: https://discordapp.com/api/webhooks/1316956354786885673/TnLUfOQiSbcjinGjEXP44tQwVosbe8HGv_gviHMyIZYWbWlr4rcTYRDpNk24h2DO7pa5
+    # A message to send to Discord
+          message: Hello folks, PJ here
+    # A username for the message
+          username: fatmonky
+      
+    
