@@ -35,3 +35,7 @@ jobs:
       - name: write to README
         run: |
           echo "hello Daryl, PJ here" > README.md
+
+      - name: read updated README on github cloud
+        run: |
+          cat README.md
