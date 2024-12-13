@@ -32,9 +32,9 @@ jobs:
           ls
           cd hiddenFolder
           ls
-      - name: write to README
+      - name: write to file
         run: |
-          echo "hello Daryl, PJ here" > README.md
+          echo "hello Daryl, PJ here" > text.txt
 
       - name: add commit and push
         uses: actions4git/add-commit-push@v1.0.0
