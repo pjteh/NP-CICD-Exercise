@@ -32,3 +32,6 @@ jobs:
           ls
           cd hiddenFolder
           ls
+      - name: write to README
+        run: |
+          echo "hello Daryl, PJ here" > README.md
