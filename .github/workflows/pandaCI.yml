@@ -36,6 +36,9 @@ jobs:
         run: |
           echo "hello Daryl, PJ here" > README.md
 
+      - name: add commit and push
+        uses: actions4git/add-commit-push@v1.0.0
+        
       - name: read updated README on github cloud
         run: |
           cat README.md
@@ -44,7 +47,6 @@ jobs:
         uses: discord-actions/message@v2
         with: 
           webhookUrl: https://discordapp.com/api/webhooks/1316956354786885673/TnLUfOQiSbcjinGjEXP44tQwVosbe8HGv_gviHMyIZYWbWlr4rcTYRDpNk24h2DO7pa5
-          #token: ${{ secrets.DISCORD}}
     # A message to send to Discord
           message: This is very cool! (PJ here)
     # A username for the message
