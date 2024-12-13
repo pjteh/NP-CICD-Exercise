@@ -31,29 +31,26 @@ jobs:
         run: |
           ls
           cd hiddenFolder
-          ls > text.txt
+#          echo "Daryl is the best" > text.txt
 #      - name: write to file
 #        run: |
 #          echo "hello Daryl, PJ here" > text.txt
 
-      - name: add commit and push
-        uses: actions4git/add-commit-push@v1.0.0
-        with:
-          repository: daryloye/CICDTest
-          path: hiddenFolder
-          token: ${{ secrets.DARYL}}
+#      - name: add commit and push to daryl's hidden repo
+#        uses: actions4git/add-commit-push@v1.0.0
+#        with:
+#          repository: daryloye/CICDTest
+#          path: hiddenFolder
+#          token: ${{ secrets.DARYL}}
         
-      - name: read updated README on github cloud
-        run: |
-          cat README.md
 
       - name: discord
         uses: discord-actions/message@v2
         with: 
           webhookUrl: https://discordapp.com/api/webhooks/1316956354786885673/TnLUfOQiSbcjinGjEXP44tQwVosbe8HGv_gviHMyIZYWbWlr4rcTYRDpNk24h2DO7pa5
     # A message to send to Discord
-          message: This is very cool! (PJ here)
+          message: Awesome stuff.
     # A username for the message
-          #username: pjteh
+          username: pjteh
       
     
