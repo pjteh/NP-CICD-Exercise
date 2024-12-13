@@ -31,13 +31,17 @@ jobs:
         run: |
           ls
           cd hiddenFolder
-          ls
-      - name: write to file
-        run: |
-          echo "hello Daryl, PJ here" > text.txt
+          ls > text.txt
+#      - name: write to file
+#        run: |
+#          echo "hello Daryl, PJ here" > text.txt
 
       - name: add commit and push
         uses: actions4git/add-commit-push@v1.0.0
+        with:
+          repository: daryloye/CICDTest
+          path: hiddenFolder
+          token: ${{ secrets.DARYL}}
         
       - name: read updated README on github cloud
         run: |
